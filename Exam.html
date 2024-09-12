@@ -5,20 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exam Page</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="Home.css">
-    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="Home.css" />
+    <link rel="icon" href="img/logo.png" />
+    <style>
+      /* Base styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .content-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      /* Make content and container responsive */
+      .content {
+        flex: 1 1 100%; /* Takes full width on smaller screens */
+        margin-bottom: 20px;
+      }
+
+      .container {
+        flex: 1 1 100%;
+      }
+
+      .instructions-list {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      /* Responsive exam list */
+      .exam-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+      }
+
+      .exam-list li {
+        margin: 10px 0;
+        list-style: none;
+      }
+
+      .exam-list li a {
+        text-decoration: none;
+      }
+
+      /* Button styles */
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      @media (min-width: 768px) {
+        /* Layout for medium and larger screens */
+        .content-section {
+          flex-direction: row;
+        }
+
+        .content {
+          flex: 1 1 60%;
+          margin-right: 20px;
+        }
+
+        .container {
+          flex: 1 1 35%;
+        }
+      }
+
+      @media (max-width: 767px) {
+        /* Adjust for small screens */
+        .content-section {
+          flex-direction: column;
+        }
+
+        .exam-list {
+          width: 100%;
+        }
+
+        button {
+          width: 100%; /* Make buttons full-width on small screens */
+        }
+      }
+    </style>
   </head>
   <body>
-    
     <header class="header">
       <nav class="navbar">
         <div class="logo">
-          <img src="https://www.clipartbest.com/cliparts/pT5/bLL/pT5bLLgqc.png" width="100">
+          <img
+            src="https://www.clipartbest.com/cliparts/pT5/bLL/pT5bLLgqc.png"
+            width="100"
+          />
         </div>
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" id="hamburger-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M3 12h18M3 6h18M3 18h18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
           </svg>
         </label>
         <ul class="links">
@@ -33,44 +135,60 @@
         </div>
       </nav>
     </header>
-<!---------section 0ne-->
+    <!---------section 0ne-->
     <section class="content-section">
       <div class="content">
         <h2>Examination Instructions</h2>
         <ul class="instructions-list">
+          <li>Each subject has a stipulate time of 1hour each</li>
+
           <li>
-            <p>Each subject has a stipulate time of 1hour each</p>
+            Ensure you write within the time frame and abide by all the rules
+            and regulations guiding our Examination as stipulated in the
+            Student’s Handbook.
           </li>
-        
+
+          <li>Attempt all questions</li>
+
           <li>
-            <p>Ensure you write within the time frame and abide by all the rules and regulations guiding our Examination as stipulated in the Student’s Handbook.</p>
+            click on the subject button below to start your quiz and click on
+            the submit button when you're done answering each questions
           </li>
-        
-          <li>
-            <p>Attempt all questions</p>
-          </li>
-        
-          <li>
-            <p>click on the subject button below to start your quiz and click on the submit button when you're done answering each questions</p>
-          </li>
-        
-        </ul><br><br>
+        </ul>
+        <br /><br />
         <h2>GOOD LUCK</h2>
       </div>
       <div class="container">
         <ul class="exam-list">
-          <li><a href="math.html" target="_blank"><button>Mathematics Quiz</button></a></li><br><br>
-          <li><a href="chem.html" target="_blank"><button>Chemistry</button></a></li><br><br>
-          <li><a href="bio.html" target="_blank"><button>Biology</button></a></li><br><br>
-          <li><a href="eng.html" target="_blank"><button>English</button></a></li><br><br>
-          <li><a href="computer.html" target="_blank"><button>Computer</button></a></li>
+          <li>
+            <a href="math.html" target="_blank"
+              ><button>Mathematics Quiz</button></a
+            >
+          </li>
+          <br /><br />
+          <li>
+            <a href="chem.html" target="_blank"><button>Chemistry</button></a>
+          </li>
+          <br /><br />
+          <li>
+            <a href="bio.html" target="_blank"><button>Biology</button></a>
+          </li>
+          <br /><br />
+          <li>
+            <a href="eng.html" target="_blank"><button>English</button></a>
+          </li>
+          <br /><br />
+          <li>
+            <a href="computer.html" target="_blank"
+              ><button>Computer</button></a
+            >
+          </li>
         </ul>
       </div>
-    
     </section>
     <!-------footer-->
     <footer>
-      <p> Equity international school.All rights reserved. 2024</p>
-   </footer>
+      <p>Equity international school.All rights reserved. 2024</p>
+    </footer>
   </body>
 </html>

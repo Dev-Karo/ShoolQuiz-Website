@@ -15,9 +15,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background:#ffffff;
-  height: 20vh;
-  font-size: 1.5rem;
+  background: #ffffff;
+  height: 19vh;
+  z-index: 1000;
 }
 
 .navbar {
@@ -28,17 +28,18 @@ body {
   margin: 0 auto;
   padding: 20px 15px;
 }
+
 .navbar .links {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 35px;
+  gap: 25px;
 }
 
 .navbar .links a {
   font-weight: 500;
   text-decoration: none;
-  color:rgb(58, 209, 58);
+  color: rgb(58, 209, 58);
   padding: 10px 0;
   transition: 0.2s ease;
   font-weight: 600;
@@ -52,43 +53,59 @@ body {
   text-decoration: none;
   color: rgb(58, 209, 58);
   font-size: 1rem;
-  padding: 15px 0;
-  transition: 0.2s ease;
-  font-weight: 600;
-}
-.navbar .buttons .signup {
-  background: black;
-  border: 1px solid black;
   padding: 10px 20px;
-  border-radius: 0.375rem;
-  text-align: center;
-  transition: 0.2s ease;
+  background: black;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
 .navbar .buttons .signup:hover {
-  background-color:rgb(58, 209, 58);
+  background-color: rgb(58, 209, 58);
   color: #fff;
 }
-/**************section one*********************/
+
+#menu-toggle {
+  display: none;
+}
+
+#hamburger-btn {
+  display: none;
+  font-size: 2rem;
+  color: rgb(58, 209, 58);
+  cursor: pointer;
+}
+
 .content-section {
   display: flex;
-  gap: 1rem;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  height: 95vh;
-  padding: 0 15px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 150px auto 100px auto;
+  padding: 20px;
 }
+
 .content-section .content {
-  max-width: 50%;
-  color: #fff;
-  margin-top: 150px;
+  max-width: 45%;
+  color: #333;
+}
+
+/* Update second image: remove border-radius and increase width & height */
+.img2 img {
+  width: 300px; /* Set width */
+  height: 300px; /* Set height to match width for square shape */
+  border-radius: 0; /* Remove border-radius completely */
+}
+
+.content-section img {
+  max-width: 300px;
+  border-radius: 50%;
 }
 
 .content h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .content p {
@@ -97,12 +114,9 @@ body {
   color: #c9c7c7;
 }
 
-
-.content-section .buttons {
-  margin-top: 40px;
-}
-
-.content-section .buttons a {
+.buttons .join {
+  background-color: #ffffff;
+  border: 2px solid rgb(58, 209, 58);
   text-decoration: none;
   color: black;
   padding: 12px 24px;
@@ -112,148 +126,71 @@ body {
   display: inline-block;
 }
 
-.buttons .join {
-  background-color: #ffffff;
+.buttons .join:hover {
+  background-color: rgb(58, 209, 58);
+  color: white;
 }
 
-.content-section .buttons a:hover {
-  background-color:rgb(58, 209, 58);
+/* Update ul bullet points: style and increase size */
+.instructions-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 20px; /* Add some padding to space the bullets */
+  margin-bottom: 20px; /* Add margin for spacing from other elements */
 }
 
-.content-section .img img {
-  width: 350px;
-  border-radius: 50%;
-  margin-top: 150px;
+.instructions-list li {
+  color: #c9c7c7;
+  font-size: 1.2rem; /* Increase font size */
+  margin-bottom: 15px; /* Add spacing between list items */
+  line-height: 1.5; /* Add line-height for better readability */
+  text-align: left;
 }
-
-/***************section two**************************/
-.content-section2 {
-  display: flex;
-  gap: 1rem;
-  justify-content:space-around;
-  align-items: center;
-  height: 75vh;
-  padding: 0 15px;
-  max-width: 1200px;
-  margin: 0 auto ;
-}
-
-.content-section2 .content {
-  max-width: 50%;
-  color: #fff;
-}
-
-.content-section2 .buttons {
-  margin-top: 40px;
-}
-
-.content-section2 .buttons a {
-  text-decoration: none;
-  color: black;
-  padding: 12px 24px;
-  border-radius: 0.375rem;
-  font-weight: 600;
-  transition: 0.2s ease;
-  display: inline-block;
-}
-
-.buttons .join {
-  background-color: #ffffff;
-}
-
-.content-section2 .buttons a:hover {
-  background-color:rgb(58, 209, 58);
-}
-
-.content-section2 .img2 img {
-  width: 450px;
-  height: 450px;
-}
-
-/* Styles for centering the list */
-.container {
-  text-align: center;
-  background: black;
-}
-/* Define the styles for the buttons */
-.container .exam-list {
-  list-style-type: none;
-  margin-top:150px;
-  display: inline-block;
-  
-}
-.container .exam-list li a button{
-    text-decoration: none;
-    font-size: 1.5rem;
-    border: 2px solid white;
-    border-radius: 5px;
-    background: lightgreen;
-    padding: 10px;
-    color: black;
-    font-weight: 500;
-}
-/* Change the text color on hover */
-.exam-list li a button:hover {
-  background-color:#fff;
-}
-/* Hamburger menu styles */
-#menu-toggle {
-  display: none;
-}
-
-#hamburger-btn {
-  font-size: 1.8rem;
-  color:rgb(58, 209, 58);
-  cursor: pointer;
-  display: none;
-  order: 1;
-}
-footer{
-  background-color:#fff;
-  height: 10vh;
-  padding:25px;
-  text-align:center;
-  font-size:24px;
-  color:rgb(58, 209, 58);
-  font-weight: 600;
-}
-
-
-@media screen and (max-width: 1023px) {
-  .navbar .logo a {
-    font-size: 1.5rem;
-  }
-
-  .links {
-    position: fixed;
-    left: -100%;
-    top: 75px;
-    width: 100%;
-    height: 100vh;
-    padding-top: 50px;
-    background: #175d69;
-    flex-direction: column;
-    transition: 0.3s ease;
-  }
-
-  .navbar #menu-toggle:checked ~ .links {
-    left: 0;
+@media screen and (max-width: 768px) {
+  .navbar .links {
+    display: none;
   }
 
   .navbar #hamburger-btn {
-    display: block;
+    display: none;
   }
 
-  .header .buttons {
-    display: none;
+  .navbar #menu-toggle:checked ~ .links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    top: 75px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+
+  .content-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Move first image to the top in mobile view */
+  .img1 {
+    order: -1;
+  }
+
+  .content-section img {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .content-section .content {
     max-width: 100%;
-    text-align: center;
   }
+}
 
-  .content-section img {
-    display: none;
-  }
+footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1rem;
+  color: rgb(58, 209, 58);
+  font-weight: 600;
 }
